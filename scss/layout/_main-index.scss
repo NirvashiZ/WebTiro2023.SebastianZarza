@@ -1,0 +1,103 @@
+.carrusel{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.carrusel ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 1030px;
+    scroll-behavior: smooth;
+
+}
+.carrusel-fotos{
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+}
+.carrusel-fotos img{
+    background-color: black;
+    border: 4px solid black;
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+
+}
+
+.carrusel-menu{
+    display: none;
+}
+
+@media screen and (min-width: 500px){
+    .carrusel-fotos{
+        overflow: hidden;
+    }
+    .carrusel-fotos img{
+        width: 500px;
+        height: 400px;
+    }
+    .carrusel-menu{
+        display: block;
+    }
+    .carrusel-menu img{
+        box-sizing: border-box;
+        width: 50px;
+        height: 40px;
+        border: 5px solid black;
+    }
+    .carrusel-menu img:hover {
+        border: none;
+    }
+}
+
+body{
+    background: linear-gradient(white, grey);
+}
+.navBar{
+    background-color: black;
+    padding: 10px;
+    list-style-type: none;
+    text-align: center;
+}
+.lista2{
+    display: inline;
+    text-align: center;
+    
+    
+}
+@media screen and (min-width: 700px){
+    .navBar{
+        display: flex;
+        flex-direction: column;   
+    }   
+}
+
+h1{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+h2{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    font-size: 30px;
+    padding: 2px 7px 2px 7px;
+}
+
+.redesTiro{
+    display: flex;
+    text-align: center;
+}
+
+@media screen and (min-width:500px) {
+    .redesTiro{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.carrusel {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.carrusel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1030px;
+  scroll-behavior: smooth;
+}
+
+.carrusel-fotos {
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+}
+
+.carrusel-fotos img {
+  background-color: black;
+  border: 4px solid black;
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.carrusel-menu {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .carrusel-fotos {
+    overflow: hidden;
+  }
+  .carrusel-fotos img {
+    width: 500px;
+    height: 400px;
+  }
+  .carrusel-menu {
+    display: block;
+  }
+  .carrusel-menu img {
+    box-sizing: border-box;
+    width: 50px;
+    height: 40px;
+    border: 5px solid black;
+  }
+  .carrusel-menu img:hover {
+    border: none;
+  }
+}
+body {
+  background: linear-gradient(white, grey);
+}
+
+.navBar {
+  background-color: black;
+  padding: 10px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.lista2 {
+  display: inline;
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .navBar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+h1 {
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  font-size: 30px;
+  padding: 2px 7px 2px 7px;
+}
+
+.redesTiro {
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+  .redesTiro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.cursosArg {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.cursosTiro h3 {
+  background-color: black;
+  color: white;
+}
+.cursosTiro img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+
+@media (max-width: 600px) {
+  .cursosArg {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.fotos {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.galeria {
+  padding: 3px;
+  border: 5px solid black;
+}
+
+@media (max-width: 600px) {
+  .fotos {
+    display: flex;
+    flex-direction: column;
+  }
+  .galeria {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 600px;
+  }
+}
+.instructores {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.profesores h3 {
+  background-color: black;
+  color: white;
+}
+.profesores img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+
+@media (max-width: 600px) {
+  .instructores {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.form {
+  width: 480px;
+  background: #fff;
+  margin: 10px auto;
+  padding: 25px 20px;
+  border: 1px solid #cacad9;
+  overflow: auto;
+  font-size: 13px;
+  color: #575748;
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    width: calc(95% - 40px);
+  }
+}
+.form h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.form label {
+  display: block;
+  margin: 10px 0;
+  overflow: auto;
+}
+
+.form label > span {
+  width: 15%;
+  font-weight: bold;
+  float: left;
+  padding-top: 8px;
+  padding-right: 1%;
+  font-size: 14px;
+}
+
+.form input[type=text],
+.form textarea {
+  box-sizing: border-box;
+  border: 1px solid #C2C2C2;
+  box-shadow: 1px 1px 4px #EBEBEB;
+  border-radius: 3px;
+  padding: 8px 1.5%;
+  outline: none;
+  resize: none;
+  width: 81%;
+  float: right;
+  font: 1.1em Arial, Helvetica, sans-serif;
+}
+
+.form textarea {
+  height: 200px;
+  white-space: normal;
+  line-height: 1.7em;
+}
+
+.form input[type=text]:focus,
+.form textarea:focus {
+  border: 1px solid #00A1D6;
+}
+
+.form input[type=submit],
+.form input[type=button] {
+  border: none;
+  padding: 8px 15px;
+  background: #00A1D6;
+  color: #fff;
+  box-shadow: 1px 1px 4px #DADADA;
+  border-radius: 3px;
+  float: right;
+  display: block;
+}
+
+.form input[type=submit]:hover,
+.form input[type=button]:hover {
+  background: #006cd9;
+  color: #fff;
+}
+
+.loading {
+  height: 32px;
+  display: none;
+  background: url("load.gif") no-repeat;
+  padding: 7px;
+  padding-left: 40px;
+  color: #353526;
+  font-weight: bold;
+  width: auto;
+  float: right;
+}
+
+.fail {
+  width: 95%;
+  color: #ff4c4d;
+  border: 2px solid #ff4c4d;
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
